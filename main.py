@@ -1,4 +1,4 @@
-from tk_gui import ManagerGUI
+from _tk_gui import ManagerGUI
 
 def main():
     current_session = ManagerGUI()

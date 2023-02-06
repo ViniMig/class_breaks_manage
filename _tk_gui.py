@@ -1,6 +1,6 @@
 import tkinter as tk
 from _classroom import Classroom
-from add_student_gui import Add_Student_GUI
+from _add_student_gui import Add_Student_GUI
 import json
 
 class ManagerGUI:
