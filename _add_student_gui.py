@@ -19,7 +19,7 @@ class Add_Student_GUI:
         self.new_name = tk.Entry(self.st_ui, textvariable = self.new_student_name)
         self.new_name.place(x = 20, y = 50, height = 25, width = 200)
         
-        self.new_stdt_btn = tk.Button(self.st_ui, text = "Add Student", font = ('Arial', 12), background='green', fg='white', command= lambda: self.create_new_student(self.new_student_name.get()))
+        self.new_stdt_btn = tk.Button(self.st_ui, text = "Add Student", font = ('Arial', 12), background='#00cc00', fg='#ffffff', command= lambda: self.create_new_student(self.new_student_name.get()))
         self.new_stdt_btn.place(x = 230, y= 50, width=100, height=25)
     
     def create_new_student(self, studn_name: str):

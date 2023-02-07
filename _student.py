@@ -17,6 +17,7 @@ class Student:
         self.is_on_break = False
         self.current_time = 0
 
+        # this executes when opening app to check the current available data and change attributes accordingly.
         for day_dict in self.date_list:
             if str(date.today()) in day_dict.values():
                 self.today_breaks = day_dict["num_breaks"]
@@ -65,10 +66,17 @@ class Student:
                 day_dict["num_breaks"] += 1
                 day_dict["total_break_time"] += new_total
                 self.today_breaks += 1
-                if new_total > 60:
-                    new_total /= 60
+                if self.time_units == 'mins':# test if current total is in minutes
+                    self.today_total_time += int(day_dict["total_break_time"] / 60)
+                elif day_dict["total_break_time"] >= 60:# test if total time associated to student is in minutes
+                    self.today_total_time /= 60
+                    self.today_total_time += day_dict["total_break_time"]
                     self.time_units = 'mins'
-                self.today_total_time += int(new_total)
+                else:# both are in seconds
+                    self.today_total_time += day_dict["total_break_time"]
+                    if self.today_total_time >= 60:# if the sum of both in seconds is more than or equal to 60
+                        self.today_total_time /= 60
+                        self.time_units = 'mins'
     
     def get_breaks(self) -> tuple:
         """

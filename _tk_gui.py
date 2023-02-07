@@ -25,7 +25,7 @@ class ManagerGUI:
         self.root['background'] = '#856ff8'
 
         #add title label
-        self.label = tk.Label(self.root, text = "Break Time!", background='#856ff8', fg='white', font = ('Comic Sans MS', 32, 'bold italic'))
+        self.label = tk.Label(self.root, text = "Break Time!", background='#856ff8', fg='#ffffff', font = ('Comic Sans MS', 32, 'bold italic'))
         self.label.pack(padx = 20, pady = 20)
 
         #button to add new student (opens popup)
@@ -36,15 +36,15 @@ class ManagerGUI:
         self.add_student_btn.place(x = 50, y = 100, height = 50, width = 50)
         
         #label for student name group
-        self.student_label = tk.Label(self.root, text = "Name", background='#856ff8', fg='white', font = ('Comic Sans MS', 18, 'bold italic'))
+        self.student_label = tk.Label(self.root, text = "Name", background='#856ff8', fg='#ffffff', font = ('Comic Sans MS', 18, 'bold italic'))
         self.student_label.place(x = 50, y = 170, height = 50, width = 250)
 
         #label for number of breaks group
-        self.n_breaks_label = tk.Label(self.root, text = "Number of breaks today", background='#856ff8', fg='white', font = ('Comic Sans MS', 18, 'bold italic'))
+        self.n_breaks_label = tk.Label(self.root, text = "Number of breaks today", background='#856ff8', fg='#ffffff', font = ('Comic Sans MS', 18, 'bold italic'))
         self.n_breaks_label.place(x = 500, y = 170, height = 50, width = 300)
 
         #label for total time on break group
-        self.total_break_label = tk.Label(self.root, text = "Total break time today", background='#856ff8', fg='white', font = ('Comic Sans MS', 18, 'bold italic'))
+        self.total_break_label = tk.Label(self.root, text = "Total break time today", background='#856ff8', fg='#ffffff', font = ('Comic Sans MS', 18, 'bold italic'))
         self.total_break_label.place(x = 900, y = 170, height = 50, width = 300)
 
         #keep track of student buttons
@@ -78,7 +78,7 @@ class ManagerGUI:
         self.st_btns_state.append(True)
         #append button
         self.st_btns.append(tk.Button(self.root, text=name, font = ('Arial', 15),
-            background='#2596be', fg='white', command= lambda c=iter_num: self.st_btn_click(c)))
+            background='#2596be', fg='#ffffff', command= lambda c=iter_num: self.st_btn_click(c)))
         #place elements in interface
         self.st_btns[iter_num].place(x = self.btn_x, y = self.btn_y, height = self.btn_h, width = self.btn_w)
         #increase y position for next element
